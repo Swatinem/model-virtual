@@ -1,0 +1,14 @@
+{
+  "name": "model-virtual",
+  "repo": "Swatinem/model-virtual",
+  "version": "0.0.1",
+  "description": "virtuals for Swatinem/model",
+  "keywords": [],
+  "main": "lib/index.js",
+  "scripts": [
+    "lib/index.js"
+  ],
+  "dependencies": {
+  },
+  "license": "LGPLv3"
+}

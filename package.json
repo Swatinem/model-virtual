@@ -1,0 +1,26 @@
+{
+  "name": "model-virtual",
+  "private": true,
+  "description": "virtuals for Swatinem/model",
+  "version": "0.0.1",
+  "keywords": [],
+  "main": "./index",
+  "maintainers": [
+    "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "model": "https://github.com/Swatinem/model/archive/master.tar.gz",
+    "mocha": "*",
+    "should": "*",
+    "jscoverage": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "scripts": {
+    "test": "make test && make test-coveralls"
+  },
+  "repository": "git://github.com/Swatinem/model-virtual.git",
+  "license": "LGPLv3"
+}
