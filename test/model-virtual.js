@@ -35,6 +35,22 @@ describe('Virtual', function () {
 		});
 		obj.prop2 = 1;
 	});
+	it('should emit correct change events on the Model', function () {
+		var SomeModel = new Model(['prop1', 'prop2'])
+			.use(Virtual)
+			.virtual('virt',
+				function () { return this.prop1; },
+				['prop1']);
+		var obj = new SomeModel();
+		obj.prop1 = 1;
+		SomeModel.on('change prop1', function () {
+			SomeModel.on('change', function (name, instance) {
+				name.should.eql('virt');
+				instance.should.eql(obj);
+			});
+		});
+		obj.prop1 = 2;
+	});
 	it('should include virtuals in the JSON version', function () {
 		var SomeModel = new Model(['prop1', 'prop2'])
 			.use(Virtual)
