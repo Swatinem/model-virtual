@@ -44,7 +44,7 @@ describe('Virtual', function () {
 		var obj = new SomeModel();
 		obj.prop1 = 1;
 		SomeModel.on('change prop1', function () {
-			SomeModel.on('change', function (name, instance) {
+			SomeModel.on('change', function (instance, name) {
 				name.should.eql('virt');
 				instance.should.eql(obj);
 			});
