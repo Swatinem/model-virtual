@@ -60,6 +60,16 @@ describe('Virtual', function () {
 		var obj = new SomeModel({prop1: 1, prop2: 2});
 		JSON.parse(JSON.stringify(obj)).should.eql({prop1: 1, prop2: 2, virt: 3});
 	});
+	it('should not throw on set', function () {
+		var SomeModel = new Model(['prop'])
+			.use(Virtual)
+			.virtual('virt', function () { return this.prop; });
+		var obj = new SomeModel();
+		obj.prop = 1;
+		obj.virt.should.eql(1);
+		obj.virt = 2;
+		obj.virt.should.eql(1);
+	});
 	it.skip('should support virtual setters', function () {
 		
 	});

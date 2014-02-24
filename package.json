@@ -11,15 +11,15 @@
   "dependencies": {
   },
   "devDependencies": {
-    "model": "https://github.com/Swatinem/model/archive/master.tar.gz",
+    "model": "Swatinem/model",
+    "istanbul": "*",
     "mocha": "*",
     "should": "*",
-    "jscoverage": "*",
     "coveralls": "*",
-    "mocha-lcov-reporter": "*"
+    "jshint": "*"
   },
   "scripts": {
-    "test": "make test && make test-coveralls"
+    "test": "make test-coveralls"
   },
   "repository": "git://github.com/Swatinem/model-virtual.git",
   "license": "LGPLv3"

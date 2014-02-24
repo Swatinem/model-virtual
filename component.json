@@ -4,9 +4,9 @@
   "version": "0.0.2",
   "description": "virtuals for Swatinem/model",
   "keywords": [],
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": [
-    "lib/index.js"
+    "index.js"
   ],
   "dependencies": {
   },

@@ -10,7 +10,7 @@ virtuals for Swatinem/model
 
     $ component install Swatinem/model-virtual
 
-## .virtual(name, getter, dependencies)
+## .virtual(name, getter, [dependencies])
 
 Defines a new virtual with `name` and `getter`.
 Will emit a `change` event whenever one of the `dependencies` changes.
